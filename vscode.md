@@ -59,7 +59,7 @@
 
 ![image](https://user-images.githubusercontent.com/101647060/176841850-f9ce171b-ad89-4dc5-a3b5-8592ffc1fa13.png)
 
-- 點選後可以選取環境
+- 點選Select Python Interpreter後可以選取環境 (會出現在視窗上方)
 
 ![image](https://user-images.githubusercontent.com/101647060/176842238-ab8eca13-ab50-4d34-a8eb-c87a89e76690.png)
 
