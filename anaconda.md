@@ -1,5 +1,13 @@
 # Anaconda 安裝
 
+Anaconda是目前最受歡迎的Python數據科學平台，除了有眾多使用者及企業用戶外，目前也超過1000種的Data Science Packages可使用
+
+適用於Windows、Linux和MacOS 不同作業系統環境下的conda軟件包(package)和虛擬環境管理器
+
+對於在安裝、執行及升級複雜的數據科學(Data Science)及機器學習(Machine Learning)環境上變得簡單快速
+
+----
+
 #### Anaconda安裝時會出現一個bug，就是使用者名稱必須為英文，所以以下過程皆是在使用者名稱為英文前提下進行
 #### 使用者名稱若不是英文，則必須在電腦上新增一個使用者再進行以下步驟
 
