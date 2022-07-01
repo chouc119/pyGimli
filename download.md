@@ -63,7 +63,9 @@
 - 環境啟動成功後，就可以安裝模組
 
 - 輸入 conda install 模組名字
-- 常用模組有 pandas、matplotlib
+- 常用模組有 pandas、matplotlib、numpy
+
+
 
 
 
