@@ -1,4 +1,12 @@
-# VScode 安裝
+# Visual Studio Code 安裝
+
+Visual Studio Code（簡稱VSCode）是一個由微軟開發的，同時支援Windows、Linux和macOS作業系統且開放原始碼的文字編輯器
+
+它支援偵錯，並內建了 Git 版本控制功能，同時也具有開發環境功能，例如程式碼補全（類似於 IntelliSense）、程式碼片段和程式碼重構等
+
+該編輯器支援用戶自訂組態，例如改變主題顏色、鍵盤捷徑等各種屬性和參數，還在編輯器中內建了擴充程式管理的功能
+
+----
 
 ### Step 1
 
