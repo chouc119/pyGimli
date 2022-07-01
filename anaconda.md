@@ -36,7 +36,7 @@
 
 - 例如 : conda create --name earthscience python=3.9.12
 
-- 想要確定python版本，只需要輸入python<即會出現以下畫面(可知版本為3.9.12)
+- 想要確定python版本，只需要輸入python即會出現以下畫面(可知版本為3.9.12)
 
 ![image](https://user-images.githubusercontent.com/101647060/176831066-a6dc315a-afd1-4c3b-a661-d697d83eb225.png)
 
