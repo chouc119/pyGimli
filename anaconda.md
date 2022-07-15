@@ -76,6 +76,8 @@ Anaconda是目前最受歡迎的Python數據科學平台，除了有眾多使用
 - pygmt 下載語法較特別
 - 輸入 conda install pygmt --channel conda-forge
 
+- bert 安裝python建議為3.7
+
 
 
 
