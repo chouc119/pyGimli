@@ -22,7 +22,7 @@ The inputs are start and end points and you can also set a specific marker.
 
 The default marker start is 1.
 
-#### Create a "world" (i.e., a layered subsurface)
+### Create a "world" (i.e., a layered subsurface)
 ```python
 # 創建模型的尺寸設定
 left = -30
@@ -38,7 +38,7 @@ pg.show(world);
 ```pg.show()``` is a handy tool to show your world and how it is being built
 ![image](https://user-images.githubusercontent.com/101647060/181185065-da94d37c-0109-4015-b5e0-b4ecea8d525a.png)
 
-#### Create a line (e.g., dipping interface)
+### Create a line (e.g., dipping interface)
 ```python
 line = mt.createLine(start=[left, -20], end=[right, -15])
 pg.show(line);
@@ -51,7 +51,7 @@ pg.show(geometry);
 ```
 ![image](https://user-images.githubusercontent.com/101647060/181186553-f4fed9c9-2758-4e0a-a26c-813481cd508e.png)
 
-#### Create a polygon (e.g., geological body)
+### Create a polygon (e.g., geological body)
 Next we create a polygon that is closed and contains three vertices.
 
 You can add more nodes to the polygon with ```addNodes``` and define how to interpolate between these nodes with ```interpolate```
@@ -74,7 +74,7 @@ pg.show(geometry, boundaryMarkers=True);
 
 
 
-#### Mesh creation & quality
+### Mesh creation & quality
 pyGIMLi has different ways to create meshes. 
 
 ```mt.createMesh``` creates a mesh using Triangle, a two-dimensional constrained Delaunay mesh generator.
@@ -99,8 +99,36 @@ showMesh(mesh, markers=True, showMesh=True);
 
 ![image](https://user-images.githubusercontent.com/101647060/181190199-08ed1316-7d56-4165-9be9-b12a274f02e8.png)
 
-#### Save geometry and mesh for later re-use
+### Save geometry and mesh for later re-use
 ```python
-mt.exportPLC(geometry, "data/geometry") # can be read by mt.importPLC()
-mesh.save("data/mesh.bms"); # can be load by pg.load()
+mt.exportPLC(geometry, "data/geometry")    # can be read by mt.importPLC()
+mesh.save("data/mesh.bms");                # can be load by pg.load()
 ```
+## Mesh modification
+### Translating
+```python
+translated_mesh = pg.Mesh(mesh)
+translated_mesh.translate([500, 25]) # 在x方向平移500m 在y方向平移25m
+pg.show(translated_mesh);
+```
+![image](https://user-images.githubusercontent.com/101647060/181197078-d0a9b8fa-b366-4a19-b0ca-5f6a7aac7676.png)
+
+
+### Scaling
+```python
+scaled_mesh = pg.Mesh(mesh) 
+scaled_mesh.scale([1, 2])
+pg.show(scaled_mesh);
+```
+![image](https://user-images.githubusercontent.com/101647060/181201370-9b679f68-74f9-4156-a7b3-afaf6367ae29.png)
+
+### Rotating
+```python
+import numpy as np
+rotated_mesh = pg.Mesh(mesh) 
+rotated_mesh.rotate([0, 0, np.deg2rad(-20)])
+pg.show(rotated_mesh);
+```
+![image](https://user-images.githubusercontent.com/101647060/181201526-dc43013e-fa67-4def-bf39-b692e3d0114c.png)
+
+### Extrusion (3D visual)
