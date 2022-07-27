@@ -99,6 +99,8 @@ showMesh(mesh, markers=True, showMesh=True);
 
 ![image](https://user-images.githubusercontent.com/101647060/181190199-08ed1316-7d56-4165-9be9-b12a274f02e8.png)
 
-Save geometry and mesh for later re-use
-
-
+#### Save geometry and mesh for later re-use
+```python
+mt.exportPLC(geometry, "data/geometry") # can be read by mt.importPLC()
+mesh.save("data/mesh.bms"); # can be load by pg.load()
+```
