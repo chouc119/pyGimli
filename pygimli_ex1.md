@@ -135,5 +135,20 @@ pg.show(rotated_mesh);
 ```python
 extruded_mesh = mt.extrudeMesh(mesh, np.linspace(0, 20, 5))          # 增加z方向 
 extruded_mesh.rotate([np.pi/2, 0, 0])                                # 旋轉並轉換 y/z 方向查看頂部延伸的網格 
-pg.show(extruded_mesh, extruded_mesh.cellMarkers());                 # pyvista (可視化工具包) 可察看下列網址 https://docs.pyvista.org/
+pg.show(extruded_mesh, extruded_mesh.cellMarkers());                 # pyvista(可視化工具包) 可察看下列網址 https://docs.pyvista.org/
+```
+![image](https://user-images.githubusercontent.com/101647060/181424344-8c82c79f-8c60-48ad-a009-c3201a6df524.png)
+
+### Final remarks on 3D
+Please note pyGIMLi is fully 3D-capable and that all the functions and methods we saw above are also working in 3D. 
+
+Plus, you can read any externally created 3D mesh with ```mt.readMeshIO``` leveraging upon the wonderful [meshio package](https://github.com/nschloe/meshio)
+
+```python
+cube = mt.createCube(size=[5, 5, 5])
+cylinder = mt.createCylinder(height=5, pos=[0, 0, 5], marker=2, nSegments=20)
+geometry3D = cube + cylinder
+mesh3D = mt.createMesh(geometry3D, area=0.1)
+mesh3D.rotate([0, -np.pi/8, 0.0])
+pg.show(mesh3D, mesh3D.cellMarkers());
 ```
