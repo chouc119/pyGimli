@@ -14,7 +14,7 @@ plt.style.use("seaborn-notebook")
 ```python
 import matplotlib.pyplot as plt
 import pygimli as pg
-from pygimli.physics import ert  # the module
+from pygimli.physics import ert 
 ```
 We first load a sample data file, which was measured on the beach of Borkum island in the North sea.
 
