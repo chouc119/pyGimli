@@ -33,3 +33,40 @@ sensors[n:,0] *= -1                                               # 左側鑽孔
 ax.plot(sensors[:,0], sensors[:,1], "ko")
 ax.figure
 ```
+![image](https://user-images.githubusercontent.com/101647060/181432861-fb837270-832e-4a4d-90f8-dd67ebbbaa9c.png)
+
+```python
+for pos in sensors:
+    geometry.createNode(pos)
+    
+mesh = mt.createMesh(geometry, quality=33.5, area=1)
+pg.show(mesh);
+```
+![image](https://user-images.githubusercontent.com/101647060/181432964-6ed9cc82-5a36-431c-819e-2fe0264ce139.png)
+
+```python
+ax, _ = pg.show(mesh, markers=True, showMesh=True)
+ax.plot(sensors[:,0], sensors[:,1], "mo");
+```
+![image](https://user-images.githubusercontent.com/101647060/181438654-bb57d09f-f7db-4631-acb3-410606032554.png)
+
+### Create measurement schedule
+```python
+scheme = tt.createCrossholeData(sensors)
+print(scheme)
+print(scheme.sensor(0))
+np.column_stack((pg.x(scheme), pg.y(scheme)))
+```
+![image](https://user-images.githubusercontent.com/101647060/181439181-ed3b0b70-7d40-455b-941c-a5c2bd705dc2.png)
+
+### Parameterize the subsurface
+Now we populate the subsurface with property values on a cell-by-cell basis.
+
+We assign values of velocities to all of the cells using ```mesh.cellMarkers()```. 
+
+Note that the markers in this case, start with 0 which works because numpy uses 0 based indexing.
+
+```python
+# vmap = [[0, 800], [1, 500], [2, 1000], [3, 2000]]           # or populate it directly
+v = np.array([800,500,1000,2000])[mesh.cellMarkers()]         # Velocities for 4 markers
+```
