@@ -3,9 +3,9 @@
 ## Inversion settings: Inverting electrical resistivity field data
 
 ### Objectives:
-1. 下載電阻率場數據集 "data/beach.ohm"
-2. 顯示數據的地形效果
-3. 使用 ERT Method Manager 對數據進行反演
+1. Load electrical resistivity field data set "data/beach.ohm"
+2. Show the topography effects of the data
+3. Use ERT Method Manager to invert the data
 
 ```python
 import matplotlib.pyplot as plt
