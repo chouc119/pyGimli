@@ -132,3 +132,8 @@ pg.show(rotated_mesh);
 ![image](https://user-images.githubusercontent.com/101647060/181201526-dc43013e-fa67-4def-bf39-b692e3d0114c.png)
 
 ### Extrusion (3D visual)
+```python
+extruded_mesh = mt.extrudeMesh(mesh, np.linspace(0, 20, 5))          # 增加z方向 
+extruded_mesh.rotate([np.pi/2, 0, 0])                                # 旋轉並轉換 y/z 方向查看頂部延伸的網格 
+pg.show(extruded_mesh, extruded_mesh.cellMarkers());                 # pyvista (可視化工具包) 可察看下列網址 https://docs.pyvista.org/
+```
