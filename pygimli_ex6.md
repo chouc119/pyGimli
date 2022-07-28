@@ -3,6 +3,8 @@
 ## Inversion with custom forward operators
 
 ### Objectives
+Objectives
+In this tutorial we will:
 
 1. Show how to use an own forward operator along with the pyGIMLi inversion
 2. Generate a synthetic model for drone-base CSEM
