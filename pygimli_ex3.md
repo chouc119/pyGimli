@@ -67,6 +67,35 @@ We assign values of velocities to all of the cells using ```mesh.cellMarkers()``
 Note that the markers in this case, start with 0 which works because numpy uses 0 based indexing.
 
 ```python
-# vmap = [[0, 800], [1, 500], [2, 1000], [3, 2000]]           # or populate it directly
-v = np.array([800,500,1000,2000])[mesh.cellMarkers()]         # Velocities for 4 markers
+# vmap = [[0, 800], [1, 500], [2, 1000], [3, 2000]]           # 或者直接填充
+v = np.array([800,500,1000,2000])[mesh.cellMarkers()]         # 4個標記的速度
 ```
+```python
+ax, _ = pg.show(mesh, v, label=pg.unit("vel"));
+
+shots = scheme["s"]
+geophones = scheme["g"]
+
+for s, g in zip(shots, geophones):
+    ray = np.array([s, g])
+    ax.plot(sensors[ray, 0], sensors[ray, 1], "w-", lw=0.5)
+```
+![image](https://user-images.githubusercontent.com/101647060/181443059-c9903be9-f03e-4243-956c-014076a0a4ab.png)
+
+### Simulate traveltime measurements
+
+The ```TravelTimeManager()``` class and method manager for travel time tomography. Below we are using the ```mgr.simulate function```. 
+
+We explain more about the TravelTime Manager in the next notebook
+
+```python
+mgr = tt.TravelTimeManager()
+data = mgr.simulate(mesh=mesh, scheme=scheme, slowness=1/v,
+                   secNodes=4, noiseLevel=0.001, noiseAbs=1e-5, seed=1337)
+print(data)
+data.save("traveltime.dat")
+```
+```python
+np.column_stack((data["s"], data["g"], data["t"]))[:12]
+```
+![image](https://user-images.githubusercontent.com/101647060/181446318-150963c1-09a0-4d06-8645-475befbd3e01.png)
