@@ -41,6 +41,8 @@ showMesh(mesh, data=T, label='Temperature $T$', cMap="hot",
          nLevs=11, showBoundary=True);
 ```
 Mesh:  Mesh: Nodes: 1386 Cells: 2627 Boundaries: 4012
+
 Assembling time:  0.026
+
 Solving time:  0.007
 ![image](https://user-images.githubusercontent.com/101647060/181428149-15a885c6-2d80-4e63-811d-e21839a57aa2.png)
