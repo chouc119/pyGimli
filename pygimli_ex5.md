@@ -61,8 +61,8 @@ Errors usually consist of a relative error and an absolute error (voltage gain).
 
 ```python
 data['err'] = ert.estimateError(data, 
-                                absoluteUError=0.00005, # 50µV
-                                relativeError=0.03)  # 3%
+                                absoluteUError=0.00005,          # 50µV
+                                relativeError=0.03)              # 3%
 ert.show(data, data['err']*100, label="error [%]");
 ```
 ![image](https://user-images.githubusercontent.com/101647060/181484901-ccff259f-0bbb-47b7-b13a-00940e5d53c2.png)
