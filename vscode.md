@@ -86,6 +86,10 @@ Visual Studio Code（簡稱VSCode）是一個由微軟開發的，同時支援Wi
 ![image](https://user-images.githubusercontent.com/101647060/176842609-be8ad697-09bc-4eeb-b593-051c546935c0.png)
 
 
+--------
+### 安裝內容撰寫工具
+https://docs.microsoft.com/zh-tw/contribute/get-started-setup-tools
+
 
 
 
