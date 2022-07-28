@@ -1,4 +1,4 @@
-# pyGIMLi Tutorial
+# [pyGIMLi Tutorial](https://github.com/gimli-org/transform2021)
 
 ## Inversion settings: Inverting electrical resistivity field data
 
