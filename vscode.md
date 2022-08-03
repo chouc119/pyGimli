@@ -92,6 +92,14 @@ https://docs.microsoft.com/zh-tw/contribute/get-started-setup-tools
 
 
 
+### 預設不會勾選但建議開啟的項目
+![image](https://user-images.githubusercontent.com/101647060/182562598-804b731f-2156-4857-8973-96c3d0c8284f.png)
+- 左下角 Manage > Settings
+![image](https://user-images.githubusercontent.com/101647060/182562857-825f81c7-6061-4632-8f26-cb4939e63d06.png)
+- 搜尋 send
+
+
+
 
 
 
