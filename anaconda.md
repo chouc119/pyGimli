@@ -79,7 +79,10 @@ Anaconda是目前最受歡迎的Python數據科學平台，除了有眾多使用
 - bert 安裝python版本建議為3.7
 
 - pygimli 安裝教學 https://www.pygimli.org/installation.html
-  - conda install -c gimli -c conda-forge -y pygimli   (可能會等一下)
+  - conda install -c gimli -c conda-forge -y pygimli (可能會等一下)
+
+
+-https://medium.com/%E8%AA%A4%E9%97%96%E6%95%B8%E6%93%9A%E5%8F%A2%E6%9E%97%E7%9A%84%E5%95%86%E7%AE%A1%E4%BA%BAzino/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8Bpython%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83spyder-%E9%87%8D%E9%BB%9E%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90-%E5%90%AB%E6%95%99%E5%AD%B8%E5%BD%B1%E7%89%87-%E5%85%A5%E9%96%80%E7%B3%BB%E5%88%97-b9b0e9630a69
 
 
 
