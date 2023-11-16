@@ -85,6 +85,7 @@ mgr.showResult(cMin=1, cMax=500, xlabel="x (m)", ylabel="z (m)");
 
 
 It shows high resistivities in the dune area and low resistivity (salt or brackish water) towards the beach. From the dune, freshwater is moving towards the sea. We want to have a look at the measured and modelled data.
+Definition: $RMS(\Omega m):\sqrt{\frac{\Sigma (f_i - d_i)^2}{N}}$
 
 ```python
 mgr.showFit();
